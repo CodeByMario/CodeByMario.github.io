@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<style>
+    body{
+        scrollbar-color: white;
+        scroll-margin: 0%;
+        scrollbar-width: 0%;
+    }
+    #navId{
+        background-color: rgb(225, 217, 217);
+    }
+    #carouselId{
+        margin: 6.4px;
+    }
+    img{
+        border-radius: 6.4px;
+    }
+    .update::-webkit-scrollbar{
+        display: none;
+    }
+    .updates{
+        overflow: scroll;
+        display: flex;
+        overflow-y: hidden;
+    }
+    h3{
+        opacity: 100%;
+    }
+    .carousel-caption{
+        background-color: whitesmoke;
+        opacity: 55%;
+        border-radius: 6.4px;
+        color: black;
+    }
+    .thumnail{
+        margin: 6.4px;
+        width: 320px;
+        height: 160px;
+        overflow: hidden;
+        border-radius: 6.4px;
+        object-fit: cover;
+    }
+    .thumnail:hover{
+        object-fit: contain;
+        opacity: 90%;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        text-transform: capitalize;
+    }
+    
+</style>
+
+<body>
+  <header>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" id="navId" role="tablist">
+        <li class="nav-item">
+            <a href="/h.html" class="nav-link active" aria-current="page" >Home</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#tab2Id">Action</a>
+                <a class="dropdown-item" href="#tab3Id">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#tab4Id">Action</a>
+            </div>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="about.html" class="nav-link">About</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a href="#" class="nav-link disabled" >profile</a>
+        </li>
+    </ul>
+
+
+
+    <!-- Tab panes -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="tab1Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
+        <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
+    </div>
+    
+    <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+    <script>
+        var triggerEl = document.querySelector('#navId a')
+        bootstrap.Tab.getInstance(triggerEl).show() // Select tab by name
+    </script>
+    
+  </header>
+  <main>
+        <!-- Corouse Starsts here-->
+        <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="Third slide"></li>
+                <li data-bs-target="#carouselId" data-bs-slide-to="4" aria-label="Third slide"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <img src="/images/Ganesh.jpg" class="w-100 d-block" alt="First slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Ganesh Chathurthi</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/Fest 2.jpg" class="w-100 d-block" alt="Second slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/Holi.jpg" class="w-100 d-block" alt="Third slide">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/Temple/Hawa mehal rajasthan.jpg" class="w-100 d-block" alt="Hawa mehal">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/images/Temple/Mahadev.jpg" class="w-100 d-block" alt="Mahadev">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h3>Title</h3>
+                        <p>Description</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+    
+        </div>
+        
+        <!--Update of upcomming festival-->
+        <marquee behavior="scroll" direction="">
+            <div class="d-flex">
+                <div class="flex-grow-1 ms-3">
+                    <h5 class="mt-0">Current Festival</h5>
+                    <p>This is some content from a media component. You can replace this with any content and adjust it as
+                        needed.</p>
+                </div>
+                <div class="flex-shrink-0">
+                    <img src="#" alt="" width="">
+                </div>
+            </div>
+        </marquee>
+        
+        <!--Image festival-->
+        <h5>Festival</h5>
+                    <p></p>
+        <div class="updates" >
+            <div class="hinfo">
+                <a href="..." class="F1">
+                    <img src="/images/Ganesh.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="/f.html" class="F1">
+                    <img src="/images/Holi.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/festival/holi 1.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Ganesh.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Holi.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Fest 2.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Ganesh.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Holi.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Fest 2.jpg" class="thumnail" alt="...">
+                </a>
+            </div>
+        </div>
+        <br><br>
+
+        <!--Image places-->
+        <h5>Places</h5>
+                    <p></p>        
+        <div class="updates" >
+            <div class="hinfo">
+                <a href="..." class="F1">
+                    <img src="/images/Temple/golden temple.jpg" class="thumnail" alt="golden temple">
+                    <div class="name">golden temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="/f.html" class="F1">
+                    <img src="/images/Temple/Hampi.jpg" class="thumnail" alt="Hampi">
+                    <div class="name">Hampi temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Hawa mehal rajasthan.jpg" class="thumnail" alt="Hawa mehal rajasthan">
+                    <div class="name">Hawa mehal rajasthan</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Mahadev.jpg" class="thumnail" alt="Mahadev">
+                    <div class="name">Mahadev temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Sun temple konark.jpg" class="thumnail" alt="Sun temple konark">
+                    <div class="name">Sun temple konark</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Thanjavur temple.jpg" class="thumnail" alt="Thanjavur temple">
+                    <div class="name">Thanjavur temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/golden temple.jpg" class="thumnail" alt="...">
+                    <div class="name">golden temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Hampi.jpg" class="thumnail" alt="Hampi">
+                    <div class="name">Hampi temple</div>
+                </a>
+            </div>
+            <div class="hinfo">
+                <a href="...">
+                    <img src="/images/Temple/Hawa mehal rajasthan.jpg" class="thumnail" alt="Hawa mehal">
+                    <div class="name">Hawa mehal</div>
+                </a>
+            </div>
+        </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
