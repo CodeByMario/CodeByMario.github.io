@@ -2,6 +2,163 @@
 <html lang="en">
 
 <head>
+  <title>AbhiHub</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+  <!--WEBSITE LOGO-->
+  <link rel="logo" href="style.css">
+    
+</head>
+
+<body>
+  <header>
+    <nav>
+        <div class="profile">
+            <img src="/profile .jpg" class="profileimg" alt="profile">
+        </div>
+        <div class="logo">
+          <img class="logo-abhihub" src="/name-removebgpng.png" alt="">
+        </div>
+
+        <!-- the button
+        <div class="menu_btn">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#Id1" aria-controls="Id1">Enable both scrolling & backdrop</button>
+            
+            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="Id1" aria-labelledby="Enable both scrolling & backdrop">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="Enable both scrolling & backdrop">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>This Web page is being developed for "PYQ","NOTES"etc</p>
+            </div>
+            </div>
+        </div>-->
+    </nav>
+  </header>
+  <main>
+    <!--Corosol START-->
+    <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+        <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <img src="/pro1/PYQ/AIKRR.jpg" class="w-100 d-block" alt="First slide">
+          <div class="carousel-caption d-md-block">
+            <h3>AIKRR</h3>
+            <p>CAE-I 2023 AI</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/PYQ/CAO.jpg" class="w-100 d-block" alt="Second slide">
+          <div class="carousel-caption d-md-block">
+            <h3>CAO</h3>
+            <p>CAE-I 2023 AI</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="/PYQ/DMGT.jpg" class="w-100 d-block" alt="Third slide">
+          <div class="carousel-caption d-md-block">
+            <h3>DMGT</h3>
+            <p>CAE-I 2023 AI</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!--Corosol END-->
+
+    
+    <!--Alert window to be added-->
+
+    <!-- Features-->
+    <div class="features">
+      <div class="feature">
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          <strong>Alert the page is under CONSTRUCTION</strong> <br> this web page is under construction if you have any suggestin feelfree to contact me!
+        </div>
+        
+        <script>
+          var alertList = document.querySelectorAll('.alert');
+          alertList.forEach(function (alert) {
+            new bootstrap.Alert(alert)
+          })
+        </script>
+        
+      </div>
+    </div>
+    <!-- ========== Start update ========== -->
+    <marquee class="name" behavior="scrolling" direction=""><b>PYQ Section</b> if you are having question paper share it with me !</marquee>
+    <div class="update">
+      <div class="list-item">
+        <img class="list_item" src="/PYQ/AIKRR.jpg" alt="AIKRR">
+        <div class="caption">
+          <h3>AIKRR</h3>
+          <p>2023</p>
+        </div>
+      </div>
+      <div class="list-item">
+        <img class="list_item" src="/PYQ/CAO.jpg" alt="CAO">
+        <div class="caption">
+          <h3>CAO</h3>
+          <p>2023</p>
+        </div>
+      </div>
+      <div class="list-item">
+        <img class="list_item" src="/PYQ/DMGT.jpg" alt="DMGT">
+        <div class="caption">
+          <h3>DMGT</h3>
+          <p>2023</p>
+        </div>
+      </div>
+      <div class="list-item">
+        <img class="list_item" src="/PYQ/DSA.jpg" alt="DSA">
+        <div class="caption">
+          <h3>DSA</h3>
+          <p>2023</p>
+        </div>
+      </div>
+    </div>
+    <!-- ========== End update ========== -->
+    
+  </main>
+  <footer>
+    <!-- place footer here-->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
+
+<!--<!doctype html>
+<html lang="en">
+
+<head>
   <title>Title</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -304,4 +461,4 @@
   </script>
 </body>
 
-</html>
+</html>-->
