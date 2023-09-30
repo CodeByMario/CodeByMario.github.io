@@ -1,0 +1,214 @@
+header{
+    background-color: rgb(3, 3, 71);
+    position: flex;
+    width: 100%;
+    height: 145.62px;
+    box-shadow: 3.2px 3.2px 32.64px black;
+    z-index: 4;
+    top: 0px;
+}
+.head{
+    display: flex;
+    padding: 16.18px;
+}
+.profile{
+    width: 80.90px;
+    height: 80.90px;
+    object-fit: cover;
+    border-radius: 360px;
+    margin: 16.18px;
+    box-shadow: 1.618px 1.618px 32.64px rgb(2, 0, 23);
+}
+.head:hover{
+    zoom: 120%;
+    cursor: pointer;
+    padding: 4.045px;
+}
+.name{
+    margin: 16.18px;
+    padding: 16.18px;
+    color: azure;
+    text-shadow: 1.618px 1.618px 32.64px rgb(2, 0, 23);
+}
+
+
+
+
+
+----------------------------------------------------------------
+body{
+        
+    background-color: rgb(3, 3, 81);
+  }
+    nav{
+        background-color: rgb(3, 3, 81);
+        color: blanchedalmond;
+        height: 500px;
+        width: 100%;
+        display: flex;
+        padding: 16px;
+        overflow: hidden;
+    }
+    .profile{
+        align-self: start;
+        border-radius: 360px;
+    }
+    .profileimg{
+        height: 64px;
+        width: 64px;
+        object-fit: cover;
+        border-radius: 360px;
+    }
+    #main{
+        background-color: rgb(255, 255, 255);
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        height: 500px;
+    }
+
+    {
+      coruousal
+      decoration
+    }
+    main{
+      border-top-right-radius: 16.18px;
+      border-top-left-radius: 16.18px;
+      padding: 10px;
+      background-color: rgb(255, 255, 255);
+    }
+    
+    .img_name{
+      text-decoration: none;
+      color: rgb(3, 3, 81);
+      background-color: whitesmoke;
+      padding: 16.18px;
+      display: flex;
+    }
+    .w-100{
+      object-fit: cover;
+      height: 45vh;
+      border-radius: 16.18px;
+    }
+    .carousel slide{
+    }
+    .features{
+      width: auto;
+      height: 320px;
+      background-color: whitesmoke;
+      border-radius: 16.18px;
+      margin:  3.2px;
+      margin-top: 16.18px;
+    }
+
+    <style>
+      body{
+        display: block;
+        background-color: rgb(3, 3, 81);
+      }
+      header{
+        position: fixed;
+      }
+      main{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        margin-top: 100px;
+        box-shadow: -5px -5px 100px rgb(0, 0, 34);
+      }
+        nav{
+            background-color: rgb(3, 3, 81);
+            color: blanchedalmond;
+            height: 500px;
+            width: 100%;
+            display: flex;
+            padding: 16px;
+            overflow: hidden;
+        }
+        .profile{
+            align-self: start;
+            border-radius: 360px;
+            box-shadow: 1.618px 1.618px 25px rgb(11, 0, 45);
+            padding: 16.18px;
+        }
+        .profileimg{
+            height: 64px;
+            width: 64px;
+            object-fit: cover;
+            border-radius: 360px;
+        }
+        .logo{
+          margin-top: 50px;
+        }
+        .menu_btn{
+          margin-left: 20%;
+        }
+        #main{
+            background-color: rgb(255, 255, 255);
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            height: 500px;
+        }
+
+        {
+          coruousal
+          decoration
+        }
+        main{
+          border-top-right-radius: 16.18px;
+          border-top-left-radius: 16.18px;
+          padding: 10px;
+          background-color: rgb(255, 255, 255);
+        }
+        
+        .img_name{
+          text-decoration: none;
+          color: rgb(3, 3, 81);
+          background-color: whitesmoke;
+          padding: 16.18px;
+          display: flex;
+        }
+        .w-100{
+          object-fit: cover;
+          height: 45vh;
+          border-radius: 16.18px;
+        }
+        .carousel slide{
+        }
+        .features{
+          width: auto;
+          height: 320px;
+          background-color: whitesmoke;
+          border-radius: 16.18px;
+          margin:  3.2px;
+          margin-top: 16.18px;
+        }
+        .list{
+          display: inline-flex;
+          height: 64px;
+          position: relative;
+          margin: 32px;
+        }
+        .list_item{
+          height: 320px;
+          width: 320px;
+          border-radius: 3.2px;
+          object-fit: cover;
+          position: absolute;
+          z-index: 9;
+        }
+        .list_info{
+          z-index: 5;
+          background-color: rgba(240, 255, 255, 0.336);
+          width: 315px;
+          height: fit-content;
+          padding: 10px;
+          margin-top: 3.2px;
+          color: azure;
+        }
+        .list_info:hover{
+          z-index: 10;
+        }
+        .list_item:hover{
+          z-index: 1;
+        }
+    </style>
