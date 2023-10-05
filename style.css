@@ -55,13 +55,31 @@ main{
     text-align: center;
     border-radius: 8.09px;
 }
+.list_pdf{
+    width: 360px;
+    object-fit: cover;
+    height: 360px;
+    border-radius: 8.09px;
+}
+.caption-pdf{
+    position: absolute;
+    bottom: 0.1px;
+    width: 340px;
+    margin: 10px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: rgb(0, 0, 0);
+    background-color: rgba(191, 182, 182, 0.556);
+    text-align: center;
+    border-radius: 8.09px;
+}
 .update{
     display: inline-flex;
-    scroll-behavior: smooth;
     overflow-y: scroll;
     width: 100%;
     border-radius: 8.09px;
     background-color: whitesmoke;
+    scroll-behavior: smooth;
 }
 .name{
     border-radius: 8.09px;
@@ -100,4 +118,48 @@ img{
 }
 img:hover{
     filter: opacity(70%);
+}
+.list-name{
+    align-self: center;
+    margin: 8.09px;
+    padding: 8.09px;
+}
+
+.about-update{
+    display: flex;
+    width: 200px;
+    padding: 8.09px;
+    font-size:32px;
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: px;
+    background-color: rgb(240, 240, 240);
+    margin-top: 3.2px;
+    border-top-right-radius: 16.18px;
+    border-top-left-radius: 16.18px;
+    padding: 16px;
+}
+footer:hover{
+    background-color: rgb(233, 233, 233);
+}
+.contact{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.id{
+    display: inline;
+    padding: 8.09px;
+    margin: 4.09px;
+    background-color: blue;
+    border-radius: 8.09px;
+    object-fit: cover;
+}
+marquee:hover{
+    cursor: pointer;
 }
