@@ -16,7 +16,25 @@
   <link rel="logo" href="style.css">
     
 </head>
-
+<!-- ========== Start top notice window ========== -->
+<div class="features top">
+  <div class="feature">
+    <div class="alert alert-primary alert-dismissible fade show" role="alert">
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      <strong>Our website is totally FREE !!!</strong> <br>
+      <p>NO AD NO Money every things are for <b>FREE !!!</b></p>
+    </div>
+    
+    <script>
+      var alertList = document.querySelectorAll('.alert');
+      alertList.forEach(function (alert) {
+        new bootstrap.Alert(alert)
+      })
+    </script>
+    
+  </div>
+</div>
+<!-- ========== End top notice window ========== -->
 <body>
   <header>
     <nav>
@@ -153,15 +171,15 @@
       </div>
       
       <div class="list-item">
-        <iframe class="list_pdf" src="/Practica/DP/Exp 6.PDF"></iframe>
+        <iframe class="list_pdf new" src="/Practica/DP/Exp 6.PDF"></iframe>
         <div class="caption-pdf">
           <h3>DP</h3>
           <p>EPX 6</p>
         </div>
       </div>
       
-      <div class="list-item">
-        <iframe class="list_pdf" src="https://drive.google.com/file/d/1JfcDoSBPFxw6EAqSL_unie73DVhZzcRA/preview"></iframe>
+      <div class="list-item new">
+        <iframe class="list_pdf new" src="https://drive.google.com/file/d/1JfcDoSBPFxw6EAqSL_unie73DVhZzcRA/preview"></iframe>
         <div class="caption-pdf">
           <h3>DP</h3>
           <p>EPX 7</p>
@@ -181,6 +199,23 @@
   </main>
   <footer>
     <!-- this is footer-->
+    <!-- ========== Start Tip Zone ========== -->
+    <div class="tip">
+      <div class="alert alert-primary" role="alert">
+        <strong>Tip of the time!</strong> <br>
+        <p>Use Chrome or Edge browser for better support!!</p>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <strong>Tip of the time!</strong> <br>
+        <p>Our Website is safe.</p>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        <strong>Tip of the time!</strong> <br>
+        <p>tap and hold image to download for free!!!!</p>
+      </div>
+    </div>
+
+    <!-- ========== End Tip Zone ========== -->
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

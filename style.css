@@ -43,6 +43,15 @@ main{
     margin: 16px;
     position: relative;
 }
+.list-item.new::before{
+    content: "New";
+    position: absolute;
+    color: white;
+    padding: 8.09px;
+    margin: 8.09px;
+    border-radius: 36px;
+    background-color: red;
+}
 .caption{
     position: absolute;
     bottom: 0.1px;
@@ -58,7 +67,7 @@ main{
 .list_pdf{
     width: 360px;
     object-fit: cover;
-    height: 360px;
+    height: 500px;
     border-radius: 8.09px;
 }
 .caption-pdf{
@@ -113,11 +122,12 @@ main{
 img{
     width: 360px;
     object-fit: cover;
-    height: 360px;
+    height: 500px;
     border-radius: 8.09px;
+    filter: brightness(60%);
 }
 img:hover{
-    filter: opacity(70%);
+    filter: none;
 }
 .list-name{
     align-self: center;
@@ -162,4 +172,7 @@ footer:hover{
 }
 marquee:hover{
     cursor: pointer;
+}
+.features.top{
+    margin-bottom: -12px;
 }
