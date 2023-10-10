@@ -77,10 +77,11 @@ main{
     margin: 10px;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
-    color: rgb(0, 0, 0);
-    background-color: rgba(191, 182, 182, 0.556);
+    color: blue;
+    background-color: rgba(214, 208, 249, 0.556);
     text-align: center;
     border-radius: 8.09px;
+    text-shadow: 5px 5px 5px black;
 }
 .update{
     display: inline-flex;
@@ -133,6 +134,7 @@ img:hover{
     align-self: center;
     margin: 8.09px;
     padding: 8.09px;
+    color: skyblue;
 }
 
 .about-update{
