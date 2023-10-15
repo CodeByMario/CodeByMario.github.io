@@ -1,3 +1,9 @@
+#full{
+    object-fit: scale-down;
+    background-color: rgba(128, 128, 128, 0.503);
+    color: white;
+}
+
 body{
     position: absolute!important;
     width: 100%;
@@ -115,6 +121,7 @@ main{
 }
 .w-100{
     border-radius: 8.09px;
+    object-fit: scale-down;
 }
 .carousel-caption{
     background-color: rgba(240, 255, 255, 0.188);
@@ -125,7 +132,6 @@ img{
     object-fit: cover;
     height: 500px;
     border-radius: 8.09px;
-    filter: brightness(60%);
 }
 img:hover{
     filter: none;
@@ -143,9 +149,6 @@ img:hover{
     padding: 8.09px;
     font-size:32px;
 }
-
-
-
 
 footer{
     width: 100%;
