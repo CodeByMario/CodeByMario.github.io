@@ -1,0 +1,37 @@
+/* styles.css */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #111;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.resume {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    color: #e50914;
+}
+
+.resume-info {
+    /* Style your resume content here */
+}
