@@ -189,6 +189,12 @@ marquee:hover{
     height: 250px;
     padding: 8.09px;
     display: inline;
+    display: inline-flex; 
+    overflow-y: scroll; 
+    width: 100%; 
+    border-radius: 8.09px; 
+    background-color: whitesmoke; 
+    scroll-behavior: smooth;
 }
 .gazal{
     margin: 8.09px;
