@@ -181,3 +181,34 @@ marquee:hover{
 .features.top{
     margin-bottom: -12px;
 }
+
+/*GAZAL STARTS HERE*/
+.gazal-section{
+    margin: 16px;
+    height: 250px;
+    padding: 8.09px;
+    display: inline;
+}
+.gazal{
+    margin: 8.09px;
+    border-radius: 8.09px;
+    background-color: whitesmoke;
+    padding: 50px;
+    text-align: center;
+    height: 100%;
+    width: 450px;
+}
+.gazal-name{
+    color: blue;
+    margin: 8.09px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.gazal-part{
+    color: blueviolet;
+    display: flex;
+    margin: 8.09px;
+    text-align: justify;
+}
+.gazal-author{
+    text-align: right;
+}
