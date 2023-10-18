@@ -135,6 +135,7 @@ img{
 }
 img:hover{
     filter: none;
+    z-index : 5;
 }
 .list-name{
     align-self: center;
