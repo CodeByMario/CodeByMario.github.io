@@ -135,6 +135,7 @@ img{
 }
 img:hover{
     filter: none;
+    z-index : 5;
 }
 .list-name{
     align-self: center;
@@ -183,7 +184,22 @@ marquee:hover{
 }
 
 /*GAZAL STARTS HERE*/
+<<<<<<< HEAD
 
+=======
+.gazal-section{
+    margin: 16px;
+    height: 250px;
+    padding: 8.09px;
+    display: inline;
+    display: inline-flex; 
+    overflow-y: scroll; 
+    width: 100%; 
+    border-radius: 8.09px; 
+    background-color: whitesmoke; 
+    scroll-behavior: smooth;
+}
+>>>>>>> 938273531d74b3ca734a4fd979a0b23a34c25d22
 .gazal{
     margin: 8.09px;
     border-radius: 8.09px;
