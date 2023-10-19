@@ -69,6 +69,9 @@ main{
     background-color: rgba(245, 245, 245, 0.3);
     text-align: center;
     border-radius: 8.09px;
+} 
+.caption-pdf:hover{
+    z-index: -5;
 }
 .list_pdf{
     width: 360px;
@@ -87,10 +90,11 @@ main{
     background-color: rgba(214, 208, 249, 0.556);
     text-align: center;
     border-radius: 8.09px;
+    margin-top: 100%;
 }
 .update{
     display: inline-flex;
-    overflow-y: scroll;
+    overflow-x: scroll;
     width: 100%;
     border-radius: 8.09px;
     background-color: whitesmoke;
@@ -189,8 +193,7 @@ marquee:hover{
     height: 250px;
     padding: 8.09px;
     display: inline;
-    display: inline-flex; 
-    overflow-y: scroll; 
+    display: inline-flex;
     width: 100%; 
     border-radius: 8.09px; 
     background-color: whitesmoke; 
