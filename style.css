@@ -184,9 +184,6 @@ marquee:hover{
 }
 
 /*GAZAL STARTS HERE*/
-<<<<<<< HEAD
-
-=======
 .gazal-section{
     margin: 16px;
     height: 250px;
@@ -199,7 +196,6 @@ marquee:hover{
     background-color: whitesmoke; 
     scroll-behavior: smooth;
 }
->>>>>>> 938273531d74b3ca734a4fd979a0b23a34c25d22
 .gazal{
     margin: 8.09px;
     border-radius: 8.09px;
