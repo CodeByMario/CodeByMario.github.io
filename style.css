@@ -72,10 +72,13 @@ main{
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
     color: white;
-    background-color: rgba(245, 245, 245, 0.3);
+    background-color: rgba(0, 0, 255, 0.548);
     text-align: center;
     border-radius: 8.09px;
 } 
+.caption:hover{
+    z-index: -1;
+}
 .caption-pdf:hover{
     z-index: -5;
 }
@@ -229,10 +232,7 @@ marquee:hover{
 }
 
 /* popup window */
-img{
-    width: 100%;
-    height: 100%;
-}
+
 
 .popup-image{
     position: fixed;
@@ -244,17 +244,25 @@ img{
     display: none;
 }
 .popup-image img{
-    width: 95%;
-    height: auto;
     display: flex;
+    margin: 0px;
+    padding: 16.18px;
+    border-radius: 16.18px;
+    overflow-y: visible;
+    height: 100%;
+    width: 100%;
 }
 .popup-image span{
     position: absolute;
-    top: 0;
+    height: 64px;
+    width: 64px;
+    right: 5px;
+    text-align: center;
     font-size: 40px;
     font-weight: bolder;
-    color: rgba(0, 0, 255, 0.395);
+    color: rgba(255, 255, 255, 0.395);
     cursor: pointer;
     z-index: 9999;
-    background-color: rgba(240, 255, 255, 0.318);
+    background-color: rgba(0, 0, 255, 0.078);
+    border-radius: 360px;
 }
