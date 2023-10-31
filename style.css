@@ -192,45 +192,6 @@ marquee:hover{
     margin-bottom: -12px;
 }
 
-/*GAZAL STARTS HERE*/
-.gazal-section{
-    margin: 16px;
-    height: 250px;
-    padding: 8.09px;
-    display: inline;
-    display: inline-flex;
-    width: 100%; 
-    border-radius: 8.09px; 
-    scroll-behavior: smooth;
-}
-.gazal{
-    margin: 8.09px;
-    border-radius: 8.09px;
-    background-color: whitesmoke;
-    padding: 40px;
-    text-align: center;
-    width: 450px;
-}
-.gazal-name{
-    color: blue;
-    margin: 8.09px;
-    font-family: "Lucida Console", "Courier New", monospace;
-}
-.gazal-part{
-    color: blueviolet;
-    font-family: "Lucida Console", "Courier New", monospace;
-    text-align: center;
-}
-.gazal-author{
-    text-align: right;
-    color: rgb(75, 55, 186);
-}
-.shaiyry{
-    display: flex;
-    position: inherit;
-    overflow-x: scroll;
-}
-
 /* popup window */
 
 img{
@@ -268,4 +229,7 @@ img{
     z-index: 9999;
     background-color: rgba(0, 0, 255, 0.078);
     border-radius: 360px;
+}
+.alert{
+    text-align: center;
 }
