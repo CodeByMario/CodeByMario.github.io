@@ -215,6 +215,7 @@ img{
     overflow-y: visible;
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 .popup-image span{
     position: absolute;
