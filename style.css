@@ -234,3 +234,23 @@ img{
 .alert{
     text-align: center;
 }
+
+.pdf_viver{
+    width: 100%;
+    padding: 0%;
+  }
+  .pdf{
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    overflow: scroll;
+    background-color: #00ADB5;
+    padding-right: 64px;
+  }
+  .pdf .pages picture img{
+    height: 540px;
+    width: 345px;
+    margin: 0%;
+    padding: 0%;
+    object-fit: contain;
+  }
