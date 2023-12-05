@@ -29,6 +29,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="testing.css">
 
   <!--WEBSITE LOGO-->
   <link rel="logo" href="style.css">
@@ -54,7 +55,12 @@
 </head>
 
 <body>
-  
+  <div id="myDiv" class="popup-image" class="section">
+    <span> CLECK HERE TO CLOSE! &times;</span>
+    <div class="container" >
+      <div id="image-container"></div>
+    </div>
+  </div>
   <div class="popup-image">
     <span>&times;</span>
     <img src="/PYQ/AIKRR.jpg" alt="">
@@ -154,9 +160,23 @@
         
       </div>
     </div>
-
-
-        
+    <div class="update">
+      <div class="list-name">
+        <strong class="about-update">DSA Booster</strong>
+        <p>Study material</p>
+      </div>
+      
+      <div class="list-item new">
+        <img id="myImg" src="/pdf.jpg" alt=""/>
+        <div class="caption">
+          <h3>SEPM NOTES</h3>
+          <p>click img to open! </p>
+        </div>
+      </div>
+    </div> 
+    
+    <br/>
+    
     <div class="update">
       <div class="list-name">
         <strong class="about-update">DSA Booster</strong>
@@ -170,7 +190,6 @@
         </div>
       </div>
 
-      
       <div class="list-item new">
         <iframe class="list_pdf" src="/dsa/U2.pdf" alt="UNIT 2"></iframe>
         <div class="caption">
@@ -178,7 +197,6 @@
           <p>DSA</p>
         </div>
       </div>
-
       
       <div class="list-item new">
         <iframe class="list_pdf" src="/dsa/U3.pdf" alt="UNIT 3" height="100%"></iframe>
@@ -235,37 +253,6 @@
       <div class="pdf_viver">
     <ol class="pdf">
       <div class="info">
-        <pre style="text-align: center;">
-
-
-
-
-
-
-
-          
-© 2023 AbhiHub. All rights reserved.
- No part of this Important 
- Question List may be reproduced,
- distributed, or transmitted 
- in any form or by any means,
- including photocopying, recording,
-  or other electronic or 
- mechanical methods, without the 
- prior written permission of 
- AbhiHub. Unauthorized use of these
-  questions may result in 
- spontaneous laughter, uncontrollable 
- giggles, and a strong 
- urge to join our next comedy night.
-  Remember, laughter is the 
- best medicine, but stealing jokes 
- is a crime punishable by an 
- eternity of dad jokes. So, be kind, 
- stay funny, and keep the 
- humor alive! 
- 🤣 #SeriousAboutFunnyBusiness
-        </pre>
       </div>
       <li class="pages">
         <picture>
@@ -594,5 +581,62 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var img = document.getElementById('myImg');
+    
+        // Add click event listener to the image
+        img.addEventListener('click', function () {
+            // Get the div element
+            var div = document.getElementById('myDiv');
+    
+            // Open the div
+            div.style.display = 'flex';
+    
+            // Store image name in variable pdf_name
+            var pdf_name = img.src.split('/').pop();
+            var a = pdf_name.split('.');
+            var src = a[0] + ".json";  // No need for single quotes
+    
+            console.log(src);
+    
+            // Fetch the JSON file based on the dynamically generated URL
+            fetch(src)
+                .then(response => response.json())
+                .then(data => displayImages(data))
+                .catch(error => console.error('Error fetching image data:', error));
+        });
+    
+        function displayImages(images) {
+            const container = document.getElementById('image-container');
+            container.innerHTML = ''; // Clear previous content
+    
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image.url;
+                imgElement.alt = image.name;
+    
+                const nameElement = document.createElement('p');
+                nameElement.textContent = image.name;
+    
+                const imageWrapper = document.createElement('div');
+                imageWrapper.appendChild(imgElement);
+                imageWrapper.appendChild(nameElement);
+                container.appendChild(imageWrapper);
+    
+                // Add a click event listener to each image
+                imgElement.onclick = () => {
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = imgElement.getAttribute('src');
+                };
+            });
+        }
+    });
+    document.querySelector('.popup-image span').onclick = () =>{
+      document.querySelector('.popup-image').style.display = 'none';
+    }
+    
+        </script>
 </body>
 </html>
