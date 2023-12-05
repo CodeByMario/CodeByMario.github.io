@@ -17,31 +17,11 @@
   <meta charset="utf-8">
   <meta name="description" content="Explore the GHRCE question bank and previous year question papers (PYQ) for comprehensive exam preparation. Access a wide range of study materials to enhance your understanding and performance in exams.">
 
-<meta name="keywords" content="abhihub, Abhihub, ghrce pyq ,ghrce notes, GHRCE , GHRCEN, GHRCE Nagpur">
-<!-- icon start-->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<!-- icon end-->
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="testing.css">
 
-  <!--WEBSITE LOGO-->
-  <link rel="logo" href="style.css">
-  
-  <!--microsoft clarity-->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "jblokzeroz");
-</script>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRZYXPTLQX"></script>
 <script>
@@ -54,16 +34,16 @@
   
 </head>
 
-<body>
-  <div id="myDiv" class="popup-image" class="section">
-    <span> CLECK HERE TO CLOSE! &times;</span>
+<body loading="lazy">
+  <div id="myDiv" class="popup-image" loading="lazy">
+    <span>&times;</span>
     <div class="container" >
       <div id="image-container"></div>
     </div>
   </div>
   <div class="popup-image">
     <span>&times;</span>
-    <img src="/PYQ/AIKRR.jpg" alt="">
+    <img src="/PYQ/AIKRR.jpg" alt="" loading="lazy">
   </div>
 
   <header>
@@ -90,10 +70,10 @@
       <div class="carousel-inner" role="listbox">
 
         <div class="carousel-item active">
-          <img src="https://drive.google.com/uc?export=view&id=1r1iWQDANsBtlx3culi2N14ts3n2ZCaXL" class="w-100 d-block" id="full" alt="ESE TIMETABLE 2023">
+          <img src="SEPM TOPIC.jpg" class="w-100 d-block" id="full" alt="SEPM TOPIC">
           <div id="full" class="carousel-caption d-md-block">
-            <h3>CAE 2023</h3>
-            <p>AI department CAE EXAM TIMETABLE</p>
+            <h3>SEPM IMP TOPIC</h3>
+            <p>This topics are just prediction!!</p>
           </div>
         </div>
         
@@ -160,14 +140,23 @@
         
       </div>
     </div>
+
     <div class="update">
       <div class="list-name">
-        <strong class="about-update">SEPM Booster</strong>
-        <p>Study material</p>
+        <strong class="about-update">Discover Section</strong>
+        <p> Study material</p>
       </div>
       
       <div class="list-item new">
-        <img id="myImg" src="/pdf.jpg" alt=""/>
+        <img id="myImg" class="image-click" src="/PYQ W-23.jpg" alt=""/>
+        <div class="caption">
+          <h3>Winter-23</h3>
+          <p>ESE PYQ </p>
+        </div>
+      </div>
+
+      <div class="list-item new">
+        <img id="myImg" class="image-click" src="/SEPM.jpg" alt=""/>
         <div class="caption">
           <h3>SEPM NOTES</h3>
           <p>click img to open! </p>
@@ -568,7 +557,7 @@
   </script>
   <!-- JavaScript code to display the images in a popup window -->
 <script>
-  document.querySelectorAll('body img').forEach(image =>{
+  document.querySelectorAll('img').forEach(image =>{
     image.onclick = () =>{
       document.querySelector('.popup-image').style.display = 'block';
       document.querySelector('.popup-image img').src = image.getAttribute('src');
@@ -584,59 +573,53 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-        var img = document.getElementById('myImg');
-    
-        // Add click event listener to the image
+    // Assuming you have multiple images with class 'image-click'
+    var images = document.querySelectorAll('.image-click');
+
+    images.forEach(function (img) {
         img.addEventListener('click', function () {
-            // Get the div element
             var div = document.getElementById('myDiv');
-    
-            // Open the div
-            div.style.display = 'flex';
-    
-            // Store image name in variable pdf_name
+            div.style.display = 'block';
+
             var pdf_name = img.src.split('/').pop();
             var a = pdf_name.split('.');
-            var src = a[0] + ".json";  // No need for single quotes
-    
+            var src = a[0] + ".json";
+
             console.log(src);
-    
-            // Fetch the JSON file based on the dynamically generated URL
+
             fetch(src)
                 .then(response => response.json())
                 .then(data => displayImages(data))
                 .catch(error => console.error('Error fetching image data:', error));
         });
-    
-        function displayImages(images) {
-            const container = document.getElementById('image-container');
-            container.innerHTML = ''; // Clear previous content
-    
-            images.forEach(image => {
-                const imgElement = document.createElement('img');
-                imgElement.src = image.url;
-                imgElement.alt = image.name;
-    
-                const nameElement = document.createElement('p');
-                nameElement.textContent = image.name;
-    
-                const imageWrapper = document.createElement('div');
-                imageWrapper.appendChild(imgElement);
-                imageWrapper.appendChild(nameElement);
-                container.appendChild(imageWrapper);
-    
-                // Add a click event listener to each image
-                imgElement.onclick = () => {
-                    document.querySelector('.popup-image').style.display = 'block';
-                    document.querySelector('.popup-image img').src = imgElement.getAttribute('src');
-                };
-            });
-        }
     });
-    document.querySelector('.popup-image span').onclick = () =>{
-      document.querySelector('.popup-image').style.display = 'none';
+
+    function displayImages(images) {
+        const container = document.getElementById('image-container');
+        container.innerHTML = ''; // Clear previous content
+
+        images.forEach(image => {
+            const imgElement = document.createElement('img');
+            imgElement.src = image.url;
+            imgElement.alt = image.name;
+
+            const nameElement = document.createElement('p');
+            nameElement.textContent = image.name;
+
+            const imageWrapper = document.createElement('div');
+            imageWrapper.appendChild(imgElement);
+            imageWrapper.appendChild(nameElement);
+            container.appendChild(imageWrapper);
+
+            // Add a click event listener to each image
+            imgElement.onclick = () => {
+                document.querySelector('.popup-image').style.display = 'block';
+                document.querySelector('.popup-image img').src = imgElement.getAttribute('src');
+            };
+        });
     }
-    
-        </script>
+});
+
+  </script>
 </body>
 </html>

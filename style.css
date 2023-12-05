@@ -253,4 +253,24 @@ img{
     margin: 0%;
     padding: 0%;
     object-fit: contain;
-  }
+}
+
+#myDiv{
+    background-color: rgb(35, 35, 35);
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 0%;
+    margin: auto;
+}
+
+#myDiv span{
+    position: fixed;
+    background-color: black;
+    border-radius: 8px;
+    width: 60px;
+    height: 42px;
+}
+#image-container{
+    
+}
