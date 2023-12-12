@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        iframe{
+            width: 100%;
+            height: 720px;
+        }
+        pre{
+            display: hidden;
+            font-size: 0%;
+        }
+        .main{
+            display: flex;
+        }
+        button{
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="https://www.programiz.com/c-programming/online-compiler/" frameborder="0"></iframe>
+    <div class="main">
+        <!-- Code Block 1 -->
+        <pre id="codeBlock11">
+#include stdio.h>
+
+    // Function to perform linear search
+    int linearSearch(int arr[], int n, int key) {
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == key) {
+                return i; // Return the index if the key is found
+            }
+        }
+        return -1; // Return -1 if the key is not found
+    }
+    
+    // Driver program
+    int main() {
+        int arr[] = {12, 34, 56, 78, 90, 43, 67, 89};
+        int n = sizeof(arr) / sizeof(arr[0]);
+    
+        int key = 67;
+        int result = linearSearch(arr, n, key);
+    
+        if (result != -1) {
+            printf("Element %d found at index %d\n", key, result);
+        } else {
+            printf("Element %d not found in the array\n", key);
+        }
+    
+        return 0;
+    }
+    
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock11')">Exp 1.1 Ls</button>
+
+        <pre id="codeBlock12">
+#include stdio.h
+
+    // Function to perform binary search
+    int binarySearch(int arr[], int low, int high, int key) {
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+    
+            if (arr[mid] == key) {
+                return mid; // Return the index if the key is found
+            } else if (arr[mid] < key) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+    
+        return -1; // Return -1 if the key is not found
+    }
+    
+    // Driver program
+    int main() {
+        int arr[] = {12, 34, 43, 56, 67, 78, 89, 90};
+        int n = sizeof(arr) / sizeof(arr[0]);
+    
+        int key = 67;
+        int result = binarySearch(arr, 0, n - 1, key);
+    
+        if (result != -1) {
+            printf("Element %d found at index %d\n", key, result);
+        } else {
+            printf("Element %d not found in the array\n", key);
+        }
+    
+        return 0;
+    }
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock12')">Exp 1.2 Bs</button>
+
+        <!-- Code Block 2 -->
+        <pre id="codeBlock21">
+            //BS
+#include stdio.h>
+int main(){
+    int arr[50], num, x, y, temp;    
+    printf("Please Enter the Number of Elements you want in the array: ");
+    scanf("%d", &num);    
+    printf("Please Enter the Value of Elements: ");
+    for(x = 0; x < num; x++)
+        scanf("%d", &arr[x]);
+    for(x = 0; x < num - 1; x++){       
+        for(y = 0; y < num - x - 1; y++){          
+            if(arr[y] > arr[y + 1]){               
+                temp = arr[y];
+                arr[y] = arr[y + 1];
+                arr[y + 1] = temp;
+            }
+        }
+    }
+    printf("Array after implementing bubble sort: ");
+    for(x = 0; x < num; x++){
+        printf("%d  ", arr[x]);
+    }
+    return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock21')">Exp 2.1 BS</button>
+
+        <pre id="codeBlock22">
+//INSER.....
+#include stdio.h>
+int main(void)
+{
+    int n, i, j, temp;
+    int arr[64];
+    printf("Enter number of elements\n");
+    scanf("%d", &n);
+    printf("Enter %d integers\n", n);
+    for (i = 0; i < n; i++) 
+    {
+        scanf("%d", &arr[i]);
+    }
+    for (i = 1; i < n; i++) 
+    {
+        j = i;
+        while (j > 0 && arr[j - 1] > arr[j]) 
+        {
+            temp = arr[j];
+            arr[j] = arr[j - 1];
+            arr[j - 1] = temp;
+            j--;
+        }
+    }
+    printf("Sorted list in ascending order:\n");
+    for (i = 0; i < n; i++) 
+    {
+        printf("%d\n", arr[i]);
+    }
+    return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock22')">Exp 2.2 IS</button>
+        
+        <!-- Code Block 1 -->
+        <pre id="codeBlock3">
+#include stdio.h>
+#include stdlib.h>
+
+#define MAX_SIZE 10
+
+// Structure for the stack
+struct Stack {
+    int array[MAX_SIZE];
+    int top;
+};
+
+// Function to initialize the stack
+void initialize(struct Stack* stack) {
+    stack->top = -1;
+}
+
+// Function to check if the stack is empty
+int isEmpty(struct Stack* stack) {
+    return stack->top == -1;
+}
+
+// Function to check if the stack is full
+int isFull(struct Stack* stack) {
+    return stack->top == MAX_SIZE - 1;
+}
+
+// Function to push an element onto the stack
+void push(struct Stack* stack, int value) {
+    if (isFull(stack)) {
+        printf("Stack is full. Cannot push.\n");
+        return;
+    }
+
+    stack->top++;
+    stack->array[stack->top] = value;
+
+    printf("Pushed %d onto the stack.\n", value);
+}
+
+// Function to pop an element from the stack
+void pop(struct Stack* stack) {
+    if (isEmpty(stack)) {
+        printf("Stack is empty. Cannot pop.\n");
+        return;
+    }
+
+    printf("Popped %d from the stack.\n", stack->array[stack->top]);
+
+    stack->top--;
+}
+
+// Driver program
+int main() {
+    struct Stack myStack;
+    initialize(&myStack);
+
+    push(&myStack, 1);
+    push(&myStack, 2);
+    push(&myStack, 3);
+
+    pop(&myStack);
+
+    push(&myStack, 4);
+
+    pop(&myStack);
+    pop(&myStack);
+    
+    pop(&myStack); // Attempting to pop from an empty stack
+
+    return 0;
+}
+    
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock3')">Exp 3</button>
+
+        <!-- Code Block 4 -->
+        <pre id="codeBlock4">
+#include stdio.h>
+#include stdlib.h>
+
+#define MAX_SIZE 10
+
+// Structure for the queue
+struct Queue {
+    int array[MAX_SIZE];
+    int front, rear;
+};
+
+// Function to initialize the queue
+void initialize(struct Queue* queue) {
+    queue->front = -1;
+    queue->rear = -1;
+}
+
+// Function to check if the queue is empty
+int isEmpty(struct Queue* queue) {
+    return (queue->front == -1 && queue->rear == -1);
+}
+
+// Function to check if the queue is full
+int isFull(struct Queue* queue) {
+    return (queue->rear + 1) % MAX_SIZE == queue->front;
+}
+
+// Function to enqueue an element into the queue
+void enqueue(struct Queue* queue, int value) {
+    if (isFull(queue)) {
+        printf("Queue is full. Cannot enqueue.\n");
+        return;
+    }
+
+    if (isEmpty(queue)) {
+        queue->front = 0;
+    }
+
+    queue->rear = (queue->rear + 1) % MAX_SIZE;
+    queue->array[queue->rear] = value;
+
+    printf("Enqueued %d to the queue.\n", value);
+}
+
+// Function to dequeue an element from the queue
+void dequeue(struct Queue* queue) {
+    if (isEmpty(queue)) {
+        printf("Queue is empty. Cannot dequeue.\n");
+        return;
+    }
+
+    printf("Dequeued %d from the queue.\n", queue->array[queue->front]);
+
+    if (queue->front == queue->rear) {
+        // If there was only one element, reset front and rear
+        queue->front = -1;
+        queue->rear = -1;
+    } else {
+        // Move front to the next element in the circular array
+        queue->front = (queue->front + 1) % MAX_SIZE;
+    }
+}
+
+// Driver program
+int main() {
+    struct Queue myQueue;
+    initialize(&myQueue);
+
+    enqueue(&myQueue, 1);
+    enqueue(&myQueue, 2);
+    enqueue(&myQueue, 3);
+
+    dequeue(&myQueue);
+
+    enqueue(&myQueue, 4);
+
+    dequeue(&myQueue);
+    dequeue(&myQueue);
+
+    dequeue(&myQueue); // Attempting to dequeue from an empty queue
+
+    return 0;
+}
+                
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock4')">Exp 4 Q</button>
+        
+        <!-- Code Block 5 -->
+        <pre id="codeBlock5">
+#include stdio.h>
+#include stdlib.h>
+
+int main()
+{
+  //node structure
+  struct node
+  {
+      int data;
+      struct node *next;
+  };
+
+  //declaring nodes
+  struct node *head,*middle,*last;
+
+  //allocating memory for each node
+  head   = malloc(sizeof(struct node));
+  middle = malloc(sizeof(struct node));
+  last   = malloc(sizeof(struct node));
+
+  //assigning values to each node
+  head->data   = 10;
+  middle->data = 20;
+  last->data   = 30;
+
+  //connecting each nodes. head->middle->last
+  head->next   = middle;
+  middle->next = last;
+  last->next   = NULL;
+
+  //temp is a reference for head pointer.
+  struct node *temp = head;
+
+  //till the node becomes null, printing each nodes data
+  while(temp != NULL)
+  {
+      printf("%d->",temp->data);
+      temp = temp->next;
+  }
+  printf("NULL");
+
+  return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock5')">Exp 5</button>
+
+        <!-- Code Block 6 -->
+        <pre id="codeBlock6">
+#include stdio.h>
+#include stdlib.h>
+
+// Node structure for the circular linked list
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+// Structure for the circular queue
+struct CircularQueue {
+    struct Node* rear;
+};
+
+// Function to initialize the circular queue
+void initialize(struct CircularQueue* cq) {
+    cq->rear = NULL;
+}
+
+// Function to add an element to the queue
+void add(struct CircularQueue* cq, int value) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = value;
+
+    // If the queue is empty, set newNode as the first node
+    if (cq->rear == NULL) {
+        newNode->next = newNode;
+        cq->rear = newNode;
+    } else {
+        // Otherwise, insert newNode at the rear and update rear's next pointer
+        newNode->next = cq->rear->next;
+        cq->rear->next = newNode;
+        cq->rear = newNode;
+    }
+
+    printf("Added %d to the queue.\n", value);
+}
+
+// Function to delete an element from the queue
+void delete(struct CircularQueue* cq) {
+    if (cq->rear == NULL) {
+        printf("Queue is empty. Cannot delete.\n");
+        return;
+    }
+
+    struct Node* front = cq->rear->next;
+
+    // If there is only one element, set rear to NULL after deletion
+    if (front == cq->rear) {
+        free(front);
+        cq->rear = NULL;
+    } else {
+        cq->rear->next = front->next;
+        free(front);
+    }
+
+    printf("Deleted element from the queue.\n");
+}
+
+// Function to display the elements in the queue
+void display(struct CircularQueue* cq) {
+    if (cq->rear == NULL) {
+        printf("Queue is empty.\n");
+        return;
+    }
+
+    struct Node* current = cq->rear->next;
+
+    printf("Queue elements: ");
+    do {
+        printf("%d ", current->data);
+        current = current->next;
+    } while (current != cq->rear->next);
+
+    printf("\n");
+}
+
+// Driver program
+int main() {
+    struct CircularQueue cq;
+    initialize(&cq);
+
+    add(&cq, 1);
+    add(&cq, 2);
+    add(&cq, 3);
+
+    display(&cq);
+
+    delete(&cq);
+
+    display(&cq);
+
+    return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock6')">Exp 6</button>
+        
+        <!-- Code Block 7 -->
+        <pre id="codeBlock7">
+#include stdio.h>
+#include stdlib.h>
+
+// Structure for a binary tree node
+struct TreeNode {
+    int data;
+    struct TreeNode* left;
+    struct TreeNode* right;
+};
+
+// Function to create a new binary tree node
+struct TreeNode* createNode(int value) {
+    struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    newNode->data = value;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
+}
+
+// Function to insert a node into the binary tree
+struct TreeNode* insertNode(struct TreeNode* root, int value) {
+    if (root == NULL) {
+        return createNode(value);
+    }
+
+    if (value < root->data) {
+        root->left = insertNode(root->left, value);
+    } else if (value > root->data) {
+        root->right = insertNode(root->right, value);
+    }
+
+    return root;
+}
+
+// Function to find the node with the minimum value in a binary tree
+struct TreeNode* findMinNode(struct TreeNode* node) {
+    struct TreeNode* current = node;
+
+    while (current->left != NULL) {
+        current = current->left;
+    }
+
+    return current;
+}
+
+// Function to delete a node from the binary tree
+struct TreeNode* deleteNode(struct TreeNode* root, int value) {
+    if (root == NULL) {
+        return root;
+    }
+
+    if (value < root->data) {
+        root->left = deleteNode(root->left, value);
+    } else if (value > root->data) {
+        root->right = deleteNode(root->right, value);
+    } else {
+        // Node with only one child or no child
+        if (root->left == NULL) {
+            struct TreeNode* temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            struct TreeNode* temp = root->left;
+            free(root);
+            return temp;
+        }
+
+        // Node with two children
+        struct TreeNode* temp = findMinNode(root->right);
+        root->data = temp->data;
+        root->right = deleteNode(root->right, temp->data);
+    }
+
+    return root;
+}
+
+// Function to perform an in-order traversal of the binary tree
+void inOrderTraversal(struct TreeNode* root) {
+    if (root != NULL) {
+        inOrderTraversal(root->left);
+        printf("%d ", root->data);
+        inOrderTraversal(root->right);
+    }
+}
+
+// Driver program
+int main() {
+    struct TreeNode* root = NULL;
+
+    // Insert nodes into the binary tree
+    root = insertNode(root, 50);
+    insertNode(root, 30);
+    insertNode(root, 20);
+    insertNode(root, 40);
+    insertNode(root, 70);
+    insertNode(root, 60);
+    insertNode(root, 80);
+
+    // Display the in-order traversal of the binary tree
+    printf("In-order traversal: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    // Delete a node from the binary tree
+    int valueToDelete = 30;
+    root = deleteNode(root, valueToDelete);
+    printf("Deleted node with value %d\n", valueToDelete);
+
+    // Display the in-order traversal after deletion
+    printf("In-order traversal after deletion: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock7')">Exp 7</button>
+
+        <!-- Code Block 8 -->
+        <pre id="codeBlock8">
+#include stdio.h
+#include stdlib.h
+
+struct TreeNode {
+    int data;
+    struct TreeNode* left;
+    struct TreeNode* right;
+};
+
+struct TreeNode* createNode(int value) {
+    struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    newNode->data = value;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
+}
+
+void inOrderTraversal(struct TreeNode* root) {
+    if (root != NULL) {
+        inOrderTraversal(root->left);
+        printf("%d ", root->data);
+        inOrderTraversal(root->right);
+    }
+}
+
+void preOrderTraversal(struct TreeNode* root) {
+    if (root != NULL) {
+        printf("%d ", root->data);
+        preOrderTraversal(root->left);
+        preOrderTraversal(root->right);
+    }
+}
+
+void postOrderTraversal(struct TreeNode* root) {
+    if (root != NULL) {
+        postOrderTraversal(root->left);
+        postOrderTraversal(root->right);
+        printf("%d ", root->data);
+    }
+}
+
+int main() {
+    struct TreeNode* root = createNode(1);
+    root->left = createNode(2);
+    root->right = createNode(3);
+    root->left->left = createNode(4);
+    root->left->right = createNode(5);
+
+    // In-order traversal
+    printf("In-order traversal: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    // Pre-order traversal
+    printf("Pre-order traversal: ");
+    preOrderTraversal(root);
+    printf("\n");
+
+    // Post-order traversal
+    printf("Post-order traversal: ");
+    postOrderTraversal(root);
+    printf("\n");
+
+    return 0;
+}
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock8')">Exp 8</button>
+        
+        <!-- Code Block 9 -->
+        <pre id="codeBlock9">
+#include stdio.h>
+#include stdlib.h>
+
+struct TreeNode {
+    int data;
+    struct TreeNode* left;
+    struct TreeNode* right;
+};
+
+struct TreeNode* createNode(int value) {
+    struct TreeNode* newNode = (struct TreeNode*)malloc(sizeof(struct TreeNode));
+    newNode->data = value;
+    newNode->left = NULL;
+    newNode->right = NULL;
+    return newNode;
+}
+
+struct TreeNode* insertNode(struct TreeNode* root, int value) {
+    if (root == NULL) {
+        return createNode(value);
+    }
+
+    if (value < root->data) {
+        root->left = insertNode(root->left, value);
+    } else if (value > root->data) {
+        root->right = insertNode(root->right, value);
+    }
+
+    return root;
+}
+
+struct TreeNode* findMinNode(struct TreeNode* node) {
+    struct TreeNode* current = node;
+
+    while (current->left != NULL) {
+        current = current->left;
+    }
+
+    return current;
+}
+
+struct TreeNode* deleteNode(struct TreeNode* root, int value) {
+    if (root == NULL) {
+        return root;
+    }
+
+    if (value < root->data) {
+        root->left = deleteNode(root->left, value);
+    } else if (value > root->data) {
+        root->right = deleteNode(root->right, value);
+    } else {
+
+        if (root->left == NULL) {
+            struct TreeNode* temp = root->right;
+            free(root);
+            return temp;
+        } else if (root->right == NULL) {
+            struct TreeNode* temp = root->left;
+            free(root);
+            return temp;
+        }
+
+        struct TreeNode* temp = findMinNode(root->right);
+        root->data = temp->data;
+        root->right = deleteNode(root->right, temp->data);
+    }
+
+    return root;
+}
+
+void inOrderTraversal(struct TreeNode* root) {
+    if (root != NULL) {
+        inOrderTraversal(root->left);
+        printf("%d ", root->data);
+        inOrderTraversal(root->right);
+    }
+}
+
+int main() {
+    struct TreeNode* root = NULL;
+
+    root = insertNode(root, 50);
+    insertNode(root, 30);
+    insertNode(root, 20);
+    insertNode(root, 40);
+    insertNode(root, 70);
+    insertNode(root, 60);
+    insertNode(root, 80);
+
+    printf("In-order traversal: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    int valueToDelete = 30;
+    root = deleteNode(root, valueToDelete);
+    printf("Deleted node with value %d\n", valueToDelete);
+
+    printf("In-order traversal after deletion: ");
+    inOrderTraversal(root);
+    printf("\n");
+
+    return 0;
+}
+                
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock9')">Exp 9</button>
+
+        <!-- Code Block 10 -->
+        <pre id="codeBlock10">
+            const code10 = "Code Block 10";
+            console.log(code10);
+        </pre>
+        <button class="copyButton" onclick="copyCode('codeBlock10')">Exp 10</button>
+    </div>
+
+    <script>
+        function copyCode(blockId) {
+            // Get the code block element
+            var codeBlock = document.getElementById(blockId);
+
+            // Create a range object
+            var range = document.createRange();
+            
+            // Select the text content of the code block
+            range.selectNode(codeBlock);
+            
+            // Add the range to the user's selection
+            window.getSelection().addRange(range);
+
+            try {
+                // Execute the copy command
+                document.execCommand('copy');
+                console.log('Code copied to clipboard!');
+            } catch (err) {
+                console.error('Unable to copy code to clipboard', err);
+            }
+
+            // Remove the range from the user's selection
+            window.getSelection().removeAllRanges();
+        }
+    </script>
+</body>
+</html>
