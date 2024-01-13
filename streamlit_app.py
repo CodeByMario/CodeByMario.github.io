@@ -1,9 +1,15 @@
 import streamlit as st
-import streamlit.components.v1 as components
+from pathlib import Path
+import os
 
-# Read the contents of your index.html file
-with open('index.html', 'r') as f:
-    html_string = f.read()
+# Define the directory where your files are located
+directory = Path(__file__).parent
 
-# Use the components.html function to display the HTML in the app
-components.html(html_string, height=800)
+# Serve the static files
+st.experimental_static(directory)
+
+# Display the index.html file
+html_file = directory / 'index.html'
+if html_file.is_file():
+    with open(html_file, 'r', encoding='utf-8') as f:
+        st.markdown(f.read(), unsafe_allow_html=True)
