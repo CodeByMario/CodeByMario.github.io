@@ -3,7 +3,8 @@ from pathlib import Path
 import os
 
 # Define the directory where your files are located
-directory = Path(__file__).parent
+directory = Path(CodeByMario.github.io
+).parent
 
 # Serve the static files
 st.experimental_static(directory)
